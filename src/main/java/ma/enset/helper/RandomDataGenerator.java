@@ -22,7 +22,8 @@ public class RandomDataGenerator {
             // Générer des données aléatoires et les écrire dans le fichier
             Random random = new Random();
             for (int i = 0; i < num_rows; i++) {
-                String date = "2023-" + String.format("%02d", random.nextInt(12) + 1) + "-" + String.format("%02d", random.nextInt(28) + 1);
+                int year = 2015 + random.nextInt(8); // Generate a random year between 2020 and 2023
+                String date = year + "-" + String.format("%02d", random.nextInt(12) + 1) + "-" + String.format("%02d", random.nextInt(28) + 1);
                 String ville = randomChoice(new String[] {"Nouakchott", "Nouadhibou", "Rosso","Kiffa"});
                 String produit = randomChoice(new String[] {"ProduitA", "ProduitB", "ProduitC"});
                 double prix = 10.0 + (90.0 * random.nextDouble()); // Prix aléatoire entre 10.0 et 100.0

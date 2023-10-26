@@ -11,14 +11,12 @@ public class RandomDataGenerator {
 
         // Nombre de lignes
         int num_rows = 100;
-
         try (FileWriter fileWriter = new FileWriter("ventes.txt")) {
             // Écrire les en-têtes séparés par des espaces
             for (String header : headers) {
                 fileWriter.write(header + " ");
             }
             fileWriter.write("\n");
-
             // Générer des données aléatoires et les écrire dans le fichier
             Random random = new Random();
             for (int i = 0; i < num_rows; i++) {

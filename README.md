@@ -2,6 +2,8 @@
 # Jobs Map Reduce
 1) Job Map Reduce  pour le calcul des ventes totales par ville
 2) Job Map Reduce  pour le calcul des ventes totales par ville et Année
+3) Job Map Reduce  pour le calcul des le nombre total de
+requêtes et le nombre de requêtes réussies par addresIp
 ## Project Overview
 1) On souhaite développer un Job Map Reduce permettant, à partir d’un
    fichier texte (ventes.txt) en entré, contenant les ventes d’une entreprise dans

@@ -1,17 +1,24 @@
-package ma.enset.job1Logs;
+package ma.enset.job2Logs;
+
+
+import ma.enset.job2Logs.RequestCountMapper;
+import ma.enset.job2Logs.RequestCountReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
 import java.io.IOException;
+
 public class RequestCountDriver {
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf);
+        Job job = Job.getInstance(conf, "Request Count");
 
         // Mapper & Reducer Classes
         job.setMapperClass(RequestCountMapper.class);
@@ -35,4 +42,3 @@ public class RequestCountDriver {
         job.waitForCompletion(true);
     }
 }
-

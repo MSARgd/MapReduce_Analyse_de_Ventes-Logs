@@ -28,3 +28,6 @@ requêtes et le nombre de requêtes réussies par addresIp
 ![Image](screenes/graphe-2.png)
 ![Image](screenes/3.png)
 ![Image](screenes/4.png)
+### 3ème Partie
+![Image](screenes/5.png)
+![Image](screenes/6.png)
